@@ -1,16 +1,12 @@
 import * as React from 'react';
-import { ITodo } from '../components/types';
+import { ITodo,TodoContextType } from '../components/types';
 import { TodoContext } from '../components/Context';
 import Todo from '../components/ToDo';
 
-type Props = {
-    todos: ITodo[];
-    updateTodo: (id: number) => void;
-  };
 
 const Todos = () => {
 
-  const {todos, updateTodo }  = React.useContext(TodoContext) as Props;
+  const {todos, updateTodo }  = React.useContext(TodoContext) as TodoContextType;
   return (
     <>
       {todos?.map((todo: ITodo) => (

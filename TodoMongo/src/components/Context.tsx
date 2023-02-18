@@ -13,6 +13,7 @@ const TodoContextProvider: React.FC<React.ReactNode> = ({ children }) => {
       setTodos(res)
     };
     getPosts();
+    
   }, []);
 
   const updateTodo = (_id: string) => {
@@ -20,24 +21,13 @@ const TodoContextProvider: React.FC<React.ReactNode> = ({ children }) => {
   }
   
   const saveTodo = (todo: ITodo) => {
-    // const newTodo: ITodo = {
-    //   id: Math.random(), // not really unique - but fine for this example
-    //   title: todo.title,
-    //   description: todo.description,
-    //   status: false,
-    // }
-    // setTodos([...todos, newTodo])
-
     axios.post("http://localhost:3004/todolist",{
         title:todo.title,
         description: todo.description,
-        // date: todo.date
     })
- 
-
   }
 
-  return <TodoContext.Provider value={{todos,updateTodo,saveTodo}}>{children}</TodoContext.Provider>;
+  return <TodoContext.Provider value={{todos, updateTodo, saveTodo}}>{children}</TodoContext.Provider>;
 };
 
 export default TodoContextProvider;

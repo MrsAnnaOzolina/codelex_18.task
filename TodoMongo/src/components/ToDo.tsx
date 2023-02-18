@@ -23,10 +23,9 @@ const Todo: React.FC<Props> = ({ todo, updateTodo }) => {
                 className='.uk-card-title'
                 > {todo.title}: </h5>
                 <p
-                style={todo.status ? {textDecoration:"line-through"} : null}
+                style={todo.status ? {textDecoration:"line-through"} : {textDecoration:"none"}}
                 >{todo.description}</p>
                    <p>{todo.date}</p>
-    
                 <button 
                 className='Card--buttons uk-button uk-button-default'
                
@@ -36,11 +35,8 @@ const Todo: React.FC<Props> = ({ todo, updateTodo }) => {
                 >
                     Complete
                 </button>
-       
-       
                 <button 
                 className='uk-button uk-button-default'
-               
                 id={todo._id}
                 onClick={(e)=> {
                   const toDelete:string = e.currentTarget.id

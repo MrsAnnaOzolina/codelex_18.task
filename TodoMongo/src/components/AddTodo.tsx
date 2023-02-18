@@ -18,10 +18,11 @@ const AddTodo: React.FC = () => {
     window.location.reload();
   };
   return (
-    <form className="uk-form" onSubmit={(e) => handleSaveTodo(e, formData)}>
+    <form 
+    className="uk-form" 
+    onSubmit={(e) => handleSaveTodo(e, formData)}>
       <div>
         <h5>Add new to do:</h5>
-     
           <label 
           htmlFor="name"
            style={{margin:"20px"}}
@@ -43,14 +44,6 @@ const AddTodo: React.FC = () => {
           type="text" 
           id="description" 
           />
-          <label htmlFor="">Date</label>
-          <br></br>
-          <input type="date" 
-          data-uk-datepicker="{format:'DD.MM.YYYY'}"
-          id='date'
-          onChange={handleForm}
-          />
-    
       </div>
       <button 
       className='uk-button uk-button-primary'

@@ -2,7 +2,7 @@
   "name": "express_typescript_nodemon",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
     "start": "ts-node ./src/server.ts",
     "start:prod": "npm run build && node ./dist/src/server.js",

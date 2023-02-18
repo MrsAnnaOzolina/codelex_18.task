@@ -22,7 +22,6 @@ async function main() {
 const MyToDo = new Schema({
   title: String,
   description: String,
-  // date:String
   date: {
     type: Date,
     default: Date.now(),
@@ -52,10 +51,11 @@ app.put("/todolist/:id",(req, res) => {
 });
 
 app.post("/todolist",(req, res) => {
-  TodolistModel.create({ status : false, title: req.body.title, description: req.body.description}   )
+  TodolistModel.create({status : false, title: req.body.title, description: req.body.description})
   .then((data) =>  res.send(data));
 });
 
 app.listen(3004, () => {
   console.log("Application started on port 3004!");
 });
+

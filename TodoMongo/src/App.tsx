@@ -9,7 +9,9 @@ function App() {
       <main 
       // className='App'
       >
-        <h1>To do List</h1>
+        <h1
+        style={{fontSize: "70px", display:"flex", justifyContent: "center"}}
+        >To do List</h1>
         <AddTodo />
         <Todos 
         />

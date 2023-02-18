@@ -14,7 +14,7 @@ const Todo: React.FC<Props> = ({ todo, updateTodo }) => {
     return (
         <div key={todo.id}
             className="uk-card-secondary"
-            style={{width:"400px", marginBottom: "20px"}}
+            style={{width:"700px", marginBottom: "20px", borderRadius: "20px"}}
         >
             <div 
                 className="uk-card-body"
@@ -25,7 +25,7 @@ const Todo: React.FC<Props> = ({ todo, updateTodo }) => {
                 <p
                 style={todo.status ? {textDecoration:"line-through"} : {textDecoration:"none"}}
                 >{todo.description}</p>
-                   <p>{todo.date}</p>
+                   <p>{todo.date.substr(0, 10)}</p>
                 <button 
                 className='Card--buttons uk-button uk-button-default'
                
